@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Form</title>
+    <link rel="stylesheet" href="../css/receipt.css">
+
+</head>
+<body>  
+    <h2 class="text-center">Invoice Form</h2>
+    <form id="receiptForm" enctype="multipart/form-data">  
+        <h4 class="text-center">Company Details</h4>
+        <div class="form-row">  
+            <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>  
+            <input type="email" id="companyEmail" name="companyEmail" placeholder="Company Email">  
+        </div>  
+        <div class="form-row">  
+            <input type="tel" id="companyPhone" name="companyPhone" placeholder="Company Phone">  
+            <textarea id="companyAddress" name="companyAddress" placeholder="Company Address" required></textarea>  
+        </div>  
+        <div class="form-row">  
+            <select id="companyCurrency" name="companyCurrency" required>  
+                <option value="">Select Currency</option>  
+                <option value="NGN">Naira (₦)</option>  
+                <option value="USD">Dollar ($)</option>  
+            </select>  
+            <input type="file" id="companyLogo" name="companyLogo" accept="image/*">  
+        </div>  
+         <h4 class="text-center">Receiver Details</h4>
+        <div class="form-row">  
+            <input type="text" id="receiverName" name="receiverName" placeholder="Receiver Name" required>  
+            <input type="tel" id="receiverPhone" name="receiverPhone" placeholder="Receiver Phone">  
+        </div>  
+        <div class="form-row">  
+            <input type="email" id="receiverEmail" name="receiverEmail" placeholder="Receiver Email">  
+            <textarea id="receiverAddress" name="receiverAddress" placeholder="Receiver Address" required></textarea>  
+        </div>  
+
+        <!-- Items Container -->  
+<div id="itemsContainer"></div>  
+<button type="button" onclick="addItem()">Add Item</button> 
+<button type="button" onclick="generateReceipt()">Generate Receipt</button>   
+        <!-- <div id="message"></div>  
+        <button id="downloadReceiptBtn" style="display:none;">Download Receipt</button>   -->
+    </form>  
+    <div id="receiptPreview" style="display: none; margin-top: 20px; border: 1px solid #ccc; padding: 10px;"></div>
+
+    <button id="downloadReceiptBtn" style="display:none;">Download Receipt</button>  
+
+
+     <script src="../formHandler/handleLogin.js"></script> 
+    
+       </body>
+
+       </html>
